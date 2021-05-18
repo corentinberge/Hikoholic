@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="@color/blue_mountain"/>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:icon="@mipmap/ic_launcher"/>
+    </item>
+</layer-list>

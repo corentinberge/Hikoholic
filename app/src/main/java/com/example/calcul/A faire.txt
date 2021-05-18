@@ -1,0 +1,16 @@
+-	Diagramme classe x 2 (Activité + package)
+-	Diagramme utilisation
+-	Algorithme de chaque classe
+-	Conclusion
+-	Architecture générale 
+
+ //rpah : j'ai modifié les calculs mathematique de distance
+
+
+
+
+
+
+
+
+
