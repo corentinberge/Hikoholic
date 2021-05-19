@@ -1,9 +1,7 @@
 package com.example.calcul;
 
 import android.content.Context;
-
-import com.example.hikoholic.R;
-
+import com.example.UPSHolic.R;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +13,7 @@ public class Database {
 
     //Attributs
     public static ArrayList<Point> Peak;
-    public static int which_db;
+    public static int whichDB;
 
     //Fonctions
 
@@ -33,10 +31,10 @@ public class Database {
         InputStream is = null;
 
         //Sélection de la base de donnée
-        if(which_db == 1){
+        if(whichDB == 1){
             is = ctx.getResources().openRawResource(R.raw.sommets2600);
         }
-        else if (which_db == 2){
+        else if (whichDB == 2){
             is = ctx.getResources().openRawResource(R.raw.toulouse);
         }
 

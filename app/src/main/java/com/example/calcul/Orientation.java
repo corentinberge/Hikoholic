@@ -7,8 +7,8 @@ public class Orientation {
 
     }
 
-    //Calcule l'angle entre 2 points
-    private static double calculateAngle(Point A, Point B)
+    //Calcule l'azimuth entre 2 points
+    private static double calculateAzimuth(Point A, Point B)
     {
 
         double lon_A = (double) A.getLon();
@@ -18,8 +18,8 @@ public class Orientation {
         double lat_B = Math.toRadians((double) B.getLat());
 
         double longDiff= Math.toRadians(lon_B-lon_A);
-        double y= Math.sin(longDiff)*Math.cos(lat_B);
-        double x=Math.cos(lat_A)*Math.sin(lat_B)-Math.sin(lat_A)*Math.cos(lat_B)*Math.cos(longDiff);
+        double y = Math.sin(longDiff)*Math.cos(lat_B);
+        double x = Math.cos(lat_A)*Math.sin(lat_B)-Math.sin(lat_A)*Math.cos(lat_B)*Math.cos(longDiff);
 
         return (Math.toDegrees(Math.atan2(y, x))+360)%360;
 
@@ -30,7 +30,7 @@ public class Orientation {
     {
 
         String Orientation = null;
-        double angle = getAngle(A, B);
+        double angle = getAzimuth(A, B);
 
         if (22.5 <= angle &&  angle < 67.5)
         {
@@ -73,10 +73,10 @@ public class Orientation {
         return calculateOrientation(A, B);
     }
 
-    //Retourne l'angle entre 2 points
-    public static double getAngle(Point A, Point B)
+    //Retourne l'azimuth entre 2 points
+    public static double getAzimuth(Point A, Point B)
     {
-        return calculateAngle(A, B);
+        return calculateAzimuth(A, B);
     }
 
 }
